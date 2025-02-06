@@ -6,8 +6,9 @@ theme:
   palette:
     primary: cyan #网站主颜色
     accent: amber #强调色
+    schemes:
     #根据系统设置自动切换模式
-    - meida: "(prefers-color-scheme)"
+    - media: "(prefers-color-scheme)"
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
