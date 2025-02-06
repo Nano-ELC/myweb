@@ -1,5 +1,9 @@
 site_name: My Docs
 site_url: https://nano-elc.github.io/myweb/
+nav:
+  - Home: index.md
+  - MATH:
+    - 数学分析Ⅱ(H): Analysis.md
 theme:
   name: material
   logo: assets/logobyAI.png
@@ -29,8 +33,27 @@ theme:
     - navigation.instant
     - navigation.instant.progress
     - navigation.tabs
-nav:
-  - Home: index.md
-  - MATH:
-    - 数学分析Ⅱ(H): 数学分析Ⅱ(H).md
-      
+  markdown_extensions:
+    - admonition #MKdocs 警告框
+    - footnotes #脚注
+    - meta #自定义文章元数据
+    - pymdownx.caret #下划线
+    - pymdownx.mark #文本高亮
+    - pymdownx.tlide #删除线
+    - pymdownx.arithmatex: #Tex语法支持
+        generic: true
+    - pymdownx.critic 
+    - pymdownx.details #折叠块支持
+    - pymdownx.emoji:
+        emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - pymdownx.inlinehilite #代码片段语法高亮
+    - pymdownx.magiclink #超链接
+    - pymdownx.smartsymbols #更好看
+    - pymdownx.superfences #支持嵌套代码块和代码块标题
+    - pymdownx.tasklist:
+        custom_checkout: true
+    - md_in_html
+    - meta
+    - toc: #大纲
+        permalink: true
+        slugify: !!python/name:pymdownx.slugs.uslugify
