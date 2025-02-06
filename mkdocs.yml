@@ -1,3 +1,35 @@
 site_name: My Docs
+site_url: https://nano-elc.github.io/myweb/
 theme:
   name: material
+  logo: assets/logobyAI.png
+  palette:
+    primary: cyan #网站主颜色
+    accent: amber #强调色
+    #根据系统设置自动切换模式
+    - meida: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    #手动切换浅色模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    #手动切换深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  #即时加载功能
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+nav:
+  - Home: index.md
+  - MATH:
+    - 数学分析Ⅱ(H): 数学分析Ⅱ(H).md
+      

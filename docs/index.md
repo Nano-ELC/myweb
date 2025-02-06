@@ -16,8 +16,4 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
 
-## 早上好
-
-一博好帅
-
-一博早上好
+## 网站施工中……
