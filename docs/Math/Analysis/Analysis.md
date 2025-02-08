@@ -1,9 +1,4 @@
----
-title: 数学分析Ⅱ(H)
-author: Nano_ELC
-date: 2025-02-06
-category: 数学笔记
----
+
 
 [TOC]
 
@@ -42,7 +37,9 @@ category: 数学笔记
 
 #### 2. 级数敛散性刻画：以部分刻画整体
 
-   定义**部分和$S_n$** 为数列前n项和，它也构成一个数列 **若这个数列收敛于常数S 就称级数收敛**，S为数项级数的和，<font color="blue">也即$u_n$对应级数的敛散性与数列$S_n$敛散性相同</font>
+   定义**部分和$S_n$** 为数列前n项和，它也构成一个数列 **若这个数列收敛于常数S 就称级数收敛**，S为数项级数的和，
+
+   <font color="blue">也即$u_n$对应级数的敛散性与数列$S_n$敛散性相同</font>
 
    #####    定理 12.1 级数收敛的柯西准则
 
@@ -89,11 +86,22 @@ category: 数学笔记
  其极限形式的推论很重要
 
 $$
-\sum u_n及\sum v_n为两个正项级数,\\
-\lim\limits_{n\to\infty}\frac{u_n}{v_n}=l\\
-1. 0<l<+\infty，两级数的敛散性相同\\
-2.l=0，那么当v_n收敛时u_n同样收敛\\
-3.l=+\infty，那么当v_n发散时u_n也发散
+\begin{aligned}
+\sum u_n \text{及} \sum v_n &\text{为两个正项级数,} 
+\lim\limits_{n\to\infty} \frac{u_n}{v_n} &= l 
+1. \ 0 < l < +\infty, &\text{两级数的敛散性相同} 
+2. \ l = 0, &\text{那么当} v_n \text{收敛时} u_n \text{同样收敛} 
+3. \ l = +\infty, &\text{那么当} v_n \text{发散时} u_n \text{也发散}
+\end{aligned}
+$$
+
+
+$$
+\begin{aligned}
+\sum u_n + \sum v_n \\
+\lim\limits_{n\to\infty} \frac{u_n}{v_n}\\
+\sum a_n
+\end{aligned}
 $$
 
 #### 定理 12.7 比式判别法
@@ -125,9 +133,7 @@ $$
   \end{flalign}
   $$
   
-- 
-
-<font color="blue">事实上这两种判别法都是将$u_n$与等比级数做了比较</font>
+- <font color="blue">事实上这两种判别法都是将$u_n$与等比级数做了比较</font>
 
 - 极限形式是类似的 小于1收敛 大于1发散
 

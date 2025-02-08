@@ -2,8 +2,13 @@ site_name: My Docs
 site_url: https://nano-elc.github.io/myweb/
 nav:
   - Home: index.md
-  - MATH:
-    - 数学分析Ⅱ(H): Analysis.md
+  - 数理基础:
+    - MATH:
+      - 数学分析Ⅱ(H): Math/Analysis/Analysis.md
+    - Physics:
+      - 普通物理学Ⅰ(H): Physics/Generalphysics1/Generalphysics1.md
+  - 读书杂谈:
+    - 智慧的疆界: Reading/The Boundaries of Intelligence/The Boundaries of Intelligence.md
 theme:
   name: material
   logo: assets/logobyAI.png
@@ -30,18 +35,33 @@ theme:
         name: Switch to light mode
   #即时加载功能
   features:
-    - navigation.instant
-    - navigation.instant.progress
-    - navigation.tabs
+  # 导航相关特性
+    - navigation.instant # 启用即时导航，通过 AJAX 异步加载页面，切换更流畅
+    - navigation.instant.progress # 即时导航时显示进度条，展示页面加载进度
+    - navigation.tabs # 启用导航标签，方便快速切换文档分类
+    - navigation.tabs.sticky # 使导航标签固定在页面顶部，随时可操作
+    - navigation.sections # 启用导航部分分组，让导航结构更清晰
+    - navigation.expand # 展开所有导航菜单，默认显示全量层级链接
+    - navigation.path # 在导航栏显示当前页面路径，明确位置
+    - navigation.prune # 修剪导航菜单，隐藏无关项使导航更简洁
+  # 搜索相关特性
+    - search.suggest #搜索自动补全
+    - search.highlight #搜索高亮
+    - search.share #通过按钮使搜索内容生成分享链接
   markdown_extensions:
-    - admonition #MKdocs 警告框
+    - pymdownx.admonition #MKdocs 警告框
     - footnotes #脚注
     - meta #自定义文章元数据
     - pymdownx.caret #下划线
     - pymdownx.mark #文本高亮
-    - pymdownx.tlide #删除线
-    - pymdownx.arithmatex: #Tex语法支持
+    - pymdownx.tilde #删除线
+    - pymdownx.arithmatex:
         generic: true
+    - math:
+      enable_smart: true
+      render_dollar: false
+    - pymdownx.betterem:
+      smart_enable: all
     - pymdownx.critic 
     - pymdownx.details #折叠块支持
     - pymdownx.emoji:
@@ -57,3 +77,30 @@ theme:
     - toc: #大纲
         permalink: true
         slugify: !!python/name:pymdownx.slugs.uslugify
+  
+extra_css:
+# - stylesheets/extra.css # 实现鼠标悬停在移动端侧栏出现功能
+- https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css
+- https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css
+ 
+extra_javascript:
+- javascripts/mathjax.js
+- javascripts/katex.js
+- https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js
+- https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.17.1/flowchart.min.js
+- https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js
+- https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js
+- https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-mindmap@9.3.0/dist/diagram-definition.0faef4c2.min.js
+- https://cdn.jsdelivr.net/npm/markdown-it-plantuml@1.4.1/index.min.js
+- https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js
+- https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js
+- https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml.js
+- https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml-full.js
+- https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-svg-full.js
+- https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js
+- https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js
+- https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+- https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js
+- https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js
+# extra_files:
+#   - Math/Analysis/Analysis.pdf
