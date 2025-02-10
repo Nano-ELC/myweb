@@ -1,5 +1,10 @@
 site_name: My Docs
 site_url: https://nano-elc.github.io/myweb/
+# plugins:
+#   - social:
+#       cards_layout: accent
+#       cards_layout_options:
+#         font_family: Noto Sans SC
 nav:
   - Home: index.md
   - 数理基础:
@@ -49,17 +54,15 @@ theme:
     - search.highlight #搜索高亮
     - search.share #通过按钮使搜索内容生成分享链接
   markdown_extensions:
-    - pymdownx.admonition #MKdocs 警告框
+    - admonition #MKdocs 警告框
     - footnotes #脚注
     - meta #自定义文章元数据
     - pymdownx.caret #下划线
     - pymdownx.mark #文本高亮
     - pymdownx.tilde #删除线
+    - attr_list #支持缩放图片
     - pymdownx.arithmatex:
         generic: true
-    - math:
-      enable_smart: true
-      render_dollar: false
     - pymdownx.betterem:
       smart_enable: all
     - pymdownx.critic 
@@ -77,30 +80,15 @@ theme:
     - toc: #大纲
         permalink: true
         slugify: !!python/name:pymdownx.slugs.uslugify
-  
 extra_css:
-# - stylesheets/extra.css # 实现鼠标悬停在移动端侧栏出现功能
 - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css
-- https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css
- 
+# - css/custom.css #调整导航偏移量
 extra_javascript:
-- javascripts/mathjax.js
-- javascripts/katex.js
-- https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js
-- https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.17.1/flowchart.min.js
-- https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js
-- https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js
-- https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-mindmap@9.3.0/dist/diagram-definition.0faef4c2.min.js
-- https://cdn.jsdelivr.net/npm/markdown-it-plantuml@1.4.1/index.min.js
-- https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js
-- https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js
-- https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml.js
-- https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml-full.js
-- https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-svg-full.js
+- javascripts/katex.js 
 - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js
 - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js
-- https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-- https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js
-- https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js
+
+
+
 # extra_files:
 #   - Math/Analysis/Analysis.pdf

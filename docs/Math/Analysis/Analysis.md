@@ -1,8 +1,10 @@
-
-
-[TOC]
-
-
+---
+#2.9日志
+#需完善的部分：警告框处理
+#Mermaid优化
+#将现有数分文件做进一步细化(比如每几章设置一个md文件)
+#社交卡片拓展包
+---
 
 # 数学分析Ⅱ（H）
 
@@ -22,13 +24,12 @@
 
 <font color="blue">这里的最大聚点和最小聚点分别是上下极限的另一种定义，证明时类似于聚点定理的证明，只是在选取子区间时，若优先选择右边的区间，则得到的是最大聚点，最小聚点同理.</font>
 
-- **定理 7.5 对任何有界数列${\mathrm{x_n}}: \underline{\lim}\limits _{n\to\infin} x_n\le \overline{\lim}\limits _{n\to\infin} x_n$**
+- **定理 7.5 对任何有界数列$\mathrm\{x_n\}: \underline {\lim \limits_{n \to \infty}}x_n \le \overline{\lim \limits_{n \to \infty}}x_n$**
 
 - **定理 7.6 $\lim\limits_{{n \to \infty}} x_n = A \iff \overline{A}=\underline{A}$**
 
-  > [!note]
-  >
-  > 极限的性质（保号性，保序性同样适用于上下极限）
+!!! note
+    极限的性质(如保号性，保序性)同样适用于上下极限
 
 ### $\S1\,级数敛散性$
 
@@ -41,7 +42,7 @@
 
    <font color="blue">也即$u_n$对应级数的敛散性与数列$S_n$敛散性相同</font>
 
-   #####    定理 12.1 级数收敛的柯西准则
+##### 定理 12.1 级数收敛的柯西准则
 
    级数收敛$\iff \forall\epsilon>0,\exists N, \forall m>N及正整数p，都有|u_{m+1}+\dots+u_{m+p}|<\epsilon$
 
@@ -50,7 +51,6 @@
    推论 级数收敛的必要条件 $\lim\limits_{n\to\infty}u_n=0$
 
 #### 3. 重要级数
-
    等比级数 |q|<1时收敛 |q|$\ge$ 1发散
 
    调和级数 $\sum \frac{1}{n}$发散(证明：Cauchy收敛的逆否命题)
@@ -87,20 +87,11 @@
 
 $$
 \begin{aligned}
-\sum u_n \text{及} \sum v_n &\text{为两个正项级数,} 
-\lim\limits_{n\to\infty} \frac{u_n}{v_n} &= l 
-1. \ 0 < l < +\infty, &\text{两级数的敛散性相同} 
-2. \ l = 0, &\text{那么当} v_n \text{收敛时} u_n \text{同样收敛} 
-3. \ l = +\infty, &\text{那么当} v_n \text{发散时} u_n \text{也发散}
-\end{aligned}
-$$
-
-
-$$
-\begin{aligned}
-\sum u_n + \sum v_n \\
-\lim\limits_{n\to\infty} \frac{u_n}{v_n}\\
-\sum a_n
+&\sum u_n \text{及} \sum v_n \text{为两个正项级数,} 
+\lim\limits_{n\to\infty} \frac{u_n}{v_n} = l \\\\
+&1.\ 0 < l < +\infty, \text{两级数的敛散性相同} \\\\
+&2.\ l = 0, \text{那么当} v_n \text{收敛时} u_n \text{同样收敛} \\\\
+&3.\ l = +\infty, \text{那么当} v_n \text{发散时} u_n \text{也发散}
 \end{aligned}
 $$
 
@@ -110,8 +101,10 @@ $$
 
 $\sum u_n为正项级数，且存在某正整数N_0及q(0<q<1)$
 $$
-1.\,\,对一切n>N_0,成立不等式\frac {u_{n+1}}{u_n} \le q \,则级数\sum u_n收敛\\
-2.\,\,对一切n>N_0,成立不等式\frac {u_{n+1}}{u_n} \ge 1 \,则级数\sum u_n发散
+\begin{aligned}
+1.\,对一切n>N_0,成立不等式\frac {u_{n+1}}{u_n} \le q \,则级数\sum u_n收敛\\\\
+2.\,对一切n>N_0,成立不等式\frac {u_{n+1}}{u_n} \ge 1 \,则级数\sum u_n发散
+\end{aligned}
 $$
 - 极限形式
   $$
@@ -127,19 +120,17 @@ $$
 
 - 亦称柯西判别法
   $$
-  \begin{flalign}
-  &若\forall n>N_0, \sqrt[n]{u_n}\le l<1,收敛\\
-  &若\forall n>N_0, \sqrt[n]{u_n}\ge1,发散\\
-  \end{flalign}
+  \begin{aligned}
+  &1.若\forall n>N_0, \sqrt[n]{u_n}\le l<1,收敛\\\\
+  &2.若\forall n>N_0, \sqrt[n]{u_n}\ge1,发散
+  \end{aligned}
   $$
   
 - <font color="blue">事实上这两种判别法都是将$u_n$与等比级数做了比较</font>
 
 - 极限形式是类似的 小于1收敛 大于1发散
 
-  > [!important]
-  >
-  > 根式判别法中**若极限不存在 只用上极限**进行判别 上极限小于1收敛 大于1发散
+  !!! important 根式判别法中**若极限不存在 只用上极限**进行判别 上极限小于1收敛 大于1发散
 
 #### 定理 12.9 积分判别法
 
@@ -155,10 +146,10 @@ $$
 - $设\sum u_n为正项级数，且存在某正整数No以及常数r,若对一切n>N_0$ 
 
 $$
-\begin{flalign}
-&1.n(1-\frac{u_{n+1}}{u_n})\ge r>1,收敛\\
+\begin{aligned}
+&1.n(1-\frac{u_{n+1}}{u_n})\ge r>1,收敛\\\\
 &2.n(1-\frac{u_{n+1}}{u_n})\le 1,发散
-\end{flalign}
+\end{aligned}
 $$
 
 极限形式： 极限值大于1，收敛；小于1，发散
@@ -169,7 +160,7 @@ $$
 
 正项级数总结（第二点的有关结论较重要，速度快的放下面一般收敛，含p,q则需要讨论（特殊情况和分子为1的情况））
 
-![总结](C:\Users\武一博\AppData\Roaming\Typora\typora-user-images\image-20250131171035470.png)
+![总结](Positiveseries.png)
 
 ### $\S3\,一般项级数$
 
@@ -181,19 +172,21 @@ $$
 ##### 定理 12.11 莱布尼茨判别法
 
 $$
-若交错级数\sum u_n满足\\
-1. 数列单调递减\\
-2.\lim\limits_{n\to\infty}u_n=0\\
+\begin{aligned}
+若交错级数\sum u_n满足:\\\\
+1.数列单调递减&\\\\
+2.\lim\limits_{n\to\infty}u_n=0\\\\
 则级数收敛
+\end{aligned}
 $$
 
 证明：写出$S_{2m+1}及S_{2m}$，他们组成一个区间套，由闭区间套定理，两者极限均为定数S
 
-推论：满足莱布尼茨判别法，那么$u_n后的余项估计式 |\mathrm{R}_n|\le u_{n+1}$
+推论：满足莱布尼茨判别法，那么$u_n$后的余项估计式$|R_n|$$\le$$u_{n+1}$
 
 #### 2. 绝对收敛与条件收敛
 
-类比反常积分的绝对收敛与条件收敛，级数加绝对值后收敛称绝对收敛；级数收敛但加绝对值后不收敛称条件收**敛**
+类比反常积分的绝对收敛与条件收敛，级数加绝对值后收敛称绝对收敛；级数收敛但加绝对值后不收敛称**条件收敛**
 
 **绝对收敛级数有以下重要性质:**
 
@@ -203,13 +196,10 @@ $$
 
 ##### 定理12.13 级数绝对收敛，和等于S，则任意重排后的级数也绝对收敛，且和数相同
 
-> [!important]
->
-> 对于条件收敛级数，结果大大不同：
->
-> [黎曼级数定理：条件收敛级数经过重排后可以得到任何实数，甚至发散 ](https://www.bilibili.com/video/BV1ti421y7z6?vd_source=aae27a9ebb9ec8d489da9ae5a49f0c44)
+!!! important 对于条件收敛级数，结果将大大不同，甚至有些反直觉
+[黎曼级数定理：条件收敛级数经过重排后可以得到任何实数，甚至发散 ](https://www.bilibili.com/video/BV1ti421y7z6?vd_source=aae27a9ebb9ec8d489da9ae5a49f0c44)
 
-$\epsilon=\mathop{max}\limits_k{|\epsilon_k|}$
+
 
 #### 3.D-A判别法
 
@@ -221,9 +211,11 @@ $\epsilon=\mathop{max}\limits_k{|\epsilon_k|}$
 
 - $\{an\}单调递减趋于0，级数\sum b_n部分和数列有界，则级数\sum a_nb_n收敛$
 
-example:
+!!! Example
+
 $$
-若\{a_n\}满足 a_1\ge a_2\ge \cdots \ge a_n \ge \cdots ,\lim\limits_{n\to\infty}a_n=0,则级数\sum a_n\sin nx和\sum a_n \cos nx均收敛 ,\forall x\in(0,2\pi)
+若\{a_n\}满足 a_1\ge a_2\ge \cdots \ge a_n \ge \cdots ,\lim\limits_{n\to\infty}a_n=0,\\\\
+则级数\sum a_n\sin nx和\sum a_n \cos nx均收敛 ,\forall x\in(0,2\pi)
 $$
 由狄利克雷判别法可证（部分和数列的有界性利用和差化积证得），作为上例的特殊情形，$\sum \frac{\sin nx}{n} ，\sum \frac{\cos nx}{n}$均收敛
 
@@ -235,10 +227,9 @@ $$
 
 现对面对不同概念时应注意的重点进行罗列：
 
->[!important]
->
->1. 当我们讨论**收敛**时，**重点在n而非x**，可以将x看作固定的，对收敛的讨论是在考察所求函数列是否逼近某个函数（极限函数）
->2. 而当我们讨论**一致收敛**时，**重点为x而非n** ,因为我们探讨的是一个区间上的性质，n就相当于一个可变的参数；一致收敛的概念是建立在收敛之上的，因为它的定义中已经在出现了极限函数
+!!! note 概念
+1. 当我们讨论**收敛**时，**重点在n而非x**，可以将x看作固定的，对收敛的讨论是在考察所求函数列是否逼近某个函数（极限函数）
+2. 而当我们讨论**一致收敛**时，**重点为x而非n** ,因为我们探讨的是一个区间上的性质，n就相当于一个可变的参数；一致收敛的概念是建立在收敛之上的，因为它的定义中已经在出现了极限函数
 
 
 
@@ -248,46 +239,45 @@ $$
 
 1. 函数列相关定义：
    $$
-   \begin{flalign}
-   &1.\,设 f_1,f_2,\cdots ,f_n,\cdots 是一列定义在同一数集E上的函数，称为定义在E上的\textbf{函数列}，记作\{f_n\}或f_n\\
-   &2.\,设x_0\in E，若f_1(x_0),f_2(x_0),\cdots,f_n(x_0),\cdots 收敛，称函数列在点x_0收敛，称x_0为函数列的收敛点\\
-   &3.\,若函数列在数集上的每一点都收敛，则对\forall x_0 \in D都有数列\{f_n(x)\}的一个极限值与之对应\\
-   &\,由此确定的函数称为函数列的\textbf{极限函数}\\
+   \begin{aligned}
+   &1.\,设 f_1,f_2,\cdots ,f_n,\cdots 是一列定义在同一数集E上的函数，称为定义在E上的\textbf{函数列}，记作\{f_n\}或f_n\\\\
+   &2.\,设x_0\in E，若f_1(x_0),f_2(x_0),\cdots,f_n(x_0),\cdots 收敛，称函数列在点x_0收敛，称x_0为函数列的收敛点\\\\
+   &3.\,若函数列在数集上的每一点都收敛，则对\forall x_0 \in D都有数列\{f_n(x)\}的一个极限值与之对应\\\\
+   &\,由此确定的函数称为函数列的\textbf{极限函数}\\\\
    &4.\,使函数列收敛的全体收敛点集合，称为函数列的\textbf{收敛域}
-   \end{flalign}
+   \end{aligned}
    $$
 
 2. 函数列极限的$\epsilon-N$定义：
    $$
-   若有一定义在D上的函数f,\forall固定的x,\forall \epsilon>0 ,\exists N(\epsilon ,x)>0,使得当n>N时，总有：\\
-   |f_n(x)-f(x)|<\epsilon\\
+   若有一定义在D上的函数f,\forall固定的x,\forall \epsilon>0 ,\exists N(\epsilon ,x)>0,使得当n>N时，总有：\\\\
+   |f_n(x)-f(x)|<\epsilon\\\\
    则称函数列的极限函数为f，记为\lim\limits _{n\to\infty}f_n(x)=f(x)
    $$
    
 3. 
-
 e.g.
-
 $$
 函数列 f_n(x)=x^n，其收敛域为(-1,1]，且有极限函数
 f(x)=\begin{cases}
-0,&|x|<1,\\
+0,&|x|<1,\\\\
 1,&x=1.
 \end{cases}
 $$
 证明：
 $$
-\forall \,0<\epsilon<1,0<|x|<1时,|f_n(x)-f(x)|=x^n,只要取N(\epsilon,x)=\frac{\ln\epsilon}{\ln|x|},当n>N时就有\\
-|f_n(x)-f(x)|<\epsilon \\
-当x=0或x=1时，|f_n(x)-f(x)|=0<\epsilon \\
+\forall \,0<\epsilon<1,0<|x|<1时,|f_n(x)-f(x)|=x^n,只要取N(\epsilon,x)=\frac{\ln\epsilon}{\ln|x|},当n>N时就有\\\\
+|f_n(x)-f(x)|<\epsilon \\\\
+当x=0或x=1时，|f_n(x)-f(x)|=0<\epsilon \\\\
 证毕.
 $$
 
-3. 函数列一致收敛的$\epsilon-N$定义：
+4. 函数列一致收敛的$\epsilon-N$定义：
 
 $$
 \forall \epsilon>0,\exists N>0,当n>N时，\forall x\in D,|f_n(x)-f(x)|<\epsilon \\
-则称函数列在D上一致收敛于f，记作\\f_n(x) \rightrightarrows f(x)\,(n\rightarrow \infty),x\in D
+则称函数列在D上一致收敛于f，记作\\\\
+f_n(x) \rightrightarrows f(x)\,(n\rightarrow \infty),x\in D
 $$
 
 ##### 定理13.1 函数列一致收敛的柯西准则
@@ -304,9 +294,7 @@ $\{f_n\}在D上一致收敛\iff \lim\limits_{n\to\infty} \sup\limits_{x\in D} \m
 
 一致收敛的几何含义十分明晰，定理13.2实际上就是将一致收敛的几何含义反映为部分点（取得上确界的点）的性质
 
-> [!note]
->
-> $\lim\limits_{n\to\infty} \sup\limits_{x\in D} \mathop{|f_n(x)-f(x)|}=0$的含义是：先对x取上确界，再对n取极限
+!!! note $\lim\limits_{n\to\infty} \sup\limits_{x\in D} \mathop{|f_n(x)-f(x)|}=0$的含义是：先对x取上确界，再对n取极限
 
 例如：$f_n(x)=\sqrt{x^2+\frac{1}{n^2}},D=(-1,1);$先求得其与极限函数差的上确界为 $\frac{1}{n}$再取极限为0，因此函数列在D上一致收敛
 
@@ -353,8 +341,8 @@ $u_1(x)+u_2(x)+\cdots+u_n(x)+\cdots,x\in E$ 称为定义在上的**函数项级�
 ##### 定理 13.3 一致收敛的柯西准则
 
 $$
-函数项级数\sum u_n(x)在数集D上一致收敛\iff \forall \epsilon,\exists N, 使得当n>N时，对一切x \in  D 和一切正整数p,都有\\
-|S_{n+p}(x)-S_n(x)|=|u_{n+1}(x)+u_{n+2}(x)+\cdots+u_{n+p}(x)|<\epsilon
+函数项级数\sum u_n(x)在数集D上一致收敛\iff \forall \epsilon, \exists N, 使得当n>N时，对一切x \in  D 和一切正整数p,都有\\\\
+|S_{n+p}(x)-S_n(x)|=|u_{n+1}(x) + u_{n+2}(x)+\cdots + u_{n+p}(x) |< \epsilon
 $$
 
 **推论** 令p=1，可以得到函数项级数一致收敛的一个必要条件：函数列${u_n(x)}$在$D$上**一致收敛**于0
@@ -372,25 +360,25 @@ $设函数项级数\sum u_n(x)定义在D上,\sum M_n为收敛的\textbf{正项�
 ##### 定理 13.6 Abel判别法
 
 $$
-\begin{flalign}
- &若有\mathrm：\\
- &1. \sum u_n(x) 在区间I上一致收敛\\
- &2. 对于每一个x \in I,\set{v_n(x)}单调\\
- &3.\set{v_n(x)}在I上一致有界\\
+\begin{aligned}
+ &若有\mathrm：\\\\
+ &1. \sum u_n(x) 在区间I上一致收敛\\\\
+ &2. 对于每一个x \in I,\set{v_n(x)}单调\\\\
+ &3.\set{v_n(x)}在I上一致有界\\\\
  &则级数\sum u_n(x)v_n(x)在I上一致收敛
- \end{flalign}
+ \end{aligned}
 $$
 
 ##### 定理 13.7 Dirichlet判别法
 
 $$
-\begin{flalign}
- &若有\mathrm：\\
- &1. \sum u_n(x) 的部分和函数列S_n(x)在I上一致有界\\
- &2. 对于每一个x \in I,\set{v_n(x)}单调\\
- &3.在I上\set{v_n(x)}\rightrightarrows0\\
+\begin{aligned}
+ &若有：\\\\
+ &1. \sum u_n(x) 的部分和函数列S_n(x)在I上一致有界\\\\
+ &2. 对于每一个x \in I,\set{v_n(x)}单调\\\\
+ &3.在I上\set{v_n(x)}\rightrightarrows0\\\\
  &则级数\sum u_n(x)v_n(x)在I上一致收敛
- \end{flalign}
+ \end{aligned}
 $$
 
 #### 4. 总结
@@ -405,14 +393,12 @@ graph LR
     C --> G[柯西准则的否命题]
     C --> H[13.2 的推论 取xn,使函数列与极限函数之差不趋于0（常用）]
 ```
-
-> [!note]
->
-> 1. 通过部分和函数列二者可以联系在一起
->
-> 2. 同时注意，在这两者关于不一致收敛的判断中，13.2的推论是一个充要条件 而柯西的推论只是一个必要条件；
->
->    并且注意他们一个要求的是收敛，另一个是一致收敛
+!!! note 
+   1. 通过部分和函数列二者可以联系在一起
+   
+   2. 同时注意，在这两者关于不一致收敛的判断中，13.2的推论是一个充要条件 而柯西的推论只是一个必要条件；
+   
+   并且注意他们一个要求的是收敛，另一个是一致收敛
 
 ```mermaid
 graph LR
