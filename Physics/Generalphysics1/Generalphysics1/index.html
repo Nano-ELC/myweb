@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
     
     
       
@@ -49,8 +49,6 @@
     
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
-    
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -553,30 +551,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 相对运动
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 相对运动">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      参考系变换
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -696,30 +670,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 相对运动
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 相对运动">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      参考系变换
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -748,132 +698,19 @@ $$</p>
 <ol>
 <li>切向加速度 与 法向加速度</li>
 </ol>
-<p><img src="img1.png"  style="zoom:50%;" /></p>
+<p><img alt="img1" src="../img1.png" /></p>
 <ol>
 <li>以圆代曲 （分析曲线运动的加速度）</li>
 </ol>
 <p>用“以圆代曲”的思想，甚至可以导出机械能守恒定律/动能定理
      如在一般曲线上
 $$
-because\,\,a_t=\frac{dv}{dt}=-g\sin\theta \
-thus,\mathrm{d}v=-g\sin\theta\mathrm\,{d}t=-g\frac{dy}{ds}dt\
-\mathrm{d}v=\frac{gdy}{v}\
-\int_{v_0}^vvdv=-g\int_{y_0}^y \mathrm{d}y\
+because\,\,a_t=\frac{dv}{dt}=-g\sin\theta \\
+thus,\mathrm{d}v=-g\sin\theta\mathrm\,{d}t=-g\frac{dy}{ds}dt\\
+\mathrm{d}v=\frac{gdy}{v}\\
+\int_{v_0}^vvdv=-g\int_{y_0}^y \mathrm{d}y\\
 v^2-v_0^2=2g(y_0-y)
 $$</p>
-<h2 id="2">2. 相对运动</h2>
-<h3 id="_2">参考系变换</h3>
-<h1 id="_3">普通物理学笔记：非惯性参考系与牵连加速度</h1>
-<h2 id="_4">一、圆滚线运动分析</h2>
-<h3 id="_5">题目描述</h3>
-<p>质点沿圆滚线运动，轨迹方程为 ( S = 4 \cos \theta )，其中：
-- ( \theta ) 为圆滚线上某点切线与 ( x ) 轴的夹角，
-- ( S ) 为点 ( P ) 到曲线最低点的弧长。</p>
-<p><strong>需证明</strong>：若角速度 ( \dot{\theta} ) 为常数，则切向速度 ( V ) 也为常数。</p>
-<h3 id="_6">推导过程</h3>
-<ol>
-<li>
-<p><strong>切向速度表达式</strong>：
-   [
-   V = \frac{dS}{dt} = \frac{d}{dt}(4 \cos \theta) = -4 \sin \theta \cdot \dot{\theta}
-   ]
-   （注：PDF中公式可能有误，此处为修正后推导）</p>
-</li>
-<li>
-<p><strong>若 ( \dot{\theta} = \text{常数} )</strong>：</p>
-</li>
-<li>当 ( \theta = 0 )（最低点）时，( V = -4 \cdot 0 \cdot \dot{\theta} = 0 )；</li>
-<li>当 ( \theta = \pi/2 ) 时，( V = -4 \cdot 1 \cdot \dot{\theta} = -4\dot{\theta} )。</li>
-</ol>
-<p>显然速度随 ( \theta ) 变化，<strong>原题结论存疑</strong>。可能需检查题目条件或公式定义。</p>
-<hr />
-<h2 id="_7">二、非惯性参考系中的力学修正</h2>
-<h3 id="1_2">1. 惯性力</h3>
-<ul>
-<li><strong>公式</strong>：若参考系 ( K' ) 相对惯性系 ( K ) 有加速度 ( \boldsymbol{A} )，则物体在 ( K' ) 中的运动需引入惯性力：
-  [
-  \boldsymbol{F}_{\text{惯性}} = -m \boldsymbol{A}
-  ]</li>
-<li><strong>牛顿定律修正</strong>：
-  [
-  \boldsymbol{F}<em>{\text{真实}} + \boldsymbol{F}</em>{\text{惯性}} = m \boldsymbol{a}_{\text{相对}}
-  ]</li>
-</ul>
-<h3 id="2_1">2. 惯性离心力</h3>
-<ul>
-<li><strong>公式</strong>：在角速度为 ( \omega ) 的转动参考系中，离心力为：
-  [
-  \boldsymbol{F}_{\text{离心}} = m \omega^2 \boldsymbol{r}
-  ]
-  方向背离转轴。</li>
-<li><strong>离心加速度</strong>：
-  [
-  \boldsymbol{a}_{\text{离心}} = \omega^2 \boldsymbol{r}
-  ]</li>
-</ul>
-<h3 id="3">3. 科里奥利力</h3>
-<ul>
-<li><strong>公式</strong>：当物体在转动参考系中具有相对速度 ( \boldsymbol{v}<em>{\text{相对}} ) 时，科里奥利力为：
-  [
-  \boldsymbol{F}</em>{\text{科里奥利}} = -2m (\boldsymbol{\omega} \times \boldsymbol{v}_{\text{相对}})
-  ]</li>
-</ul>
-<hr />
-<h2 id="_8">三、牵连加速度与虚拟力</h2>
-<h3 id="1_3">1. 牵连加速度定义</h3>
-<p>牵连加速度是非惯性参考系因自身加速运动（平动或转动）产生的附加加速度，公式为：
-[
-\boldsymbol{a}<em>{\text{牵连}} = \boldsymbol{a}</em>{\text{参考系}} + \boldsymbol{a}<em>{\text{离心}} + \boldsymbol{a}</em>{\text{科里奥利}}
-]</p>
-<h3 id="2_2">2. 应用示例</h3>
-<ul>
-<li><strong>平动参考系</strong>：若参考系以加速度 ( \boldsymbol{A} ) 平动，则牵连加速度为 ( -\boldsymbol{A} )。</li>
-<li><strong>转动参考系</strong>：牵连加速度包括离心加速度和科里奥利加速度。</li>
-</ul>
-<hr />
-<h2 id="_9">四、关键公式总结</h2>
-<table>
-<thead>
-<tr>
-<th>概念</th>
-<th>公式</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>切向速度</td>
-<td>( V = \frac{dS}{dt} = -4 \sin \theta \cdot \dot{\theta} )</td>
-</tr>
-<tr>
-<td>惯性力</td>
-<td>( \boldsymbol{F}_{\text{惯性}} = -m \boldsymbol{A} )</td>
-</tr>
-<tr>
-<td>离心力</td>
-<td>( \boldsymbol{F}_{\text{离心}} = m \omega^2 \boldsymbol{r} )</td>
-</tr>
-<tr>
-<td>科里奥利力</td>
-<td>( \boldsymbol{F}_{\text{科}} = -2m (\boldsymbol{\omega} \times \boldsymbol{v}) )</td>
-</tr>
-<tr>
-<td>牵连加速度</td>
-<td>( \boldsymbol{a}_{\text{牵连}} = \boldsymbol{A} + \omega^2 \boldsymbol{r} + 2\boldsymbol{\omega} \times \boldsymbol{v} )</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="_10">五、问题与思考</h2>
-<ol>
-<li><strong>圆滚线运动题目中切速度是否为常数？</strong>  </li>
-<li>
-<p>需重新核对题目条件或轨迹方程定义。</p>
-</li>
-<li>
-<p><strong>如何区分牵连加速度与科里奥利加速度？</strong>  </p>
-</li>
-<li>牵连加速度包含参考系平动和离心效应，科里奥利加速度由相对运动引起。</li>
-</ol>
 
 
 
@@ -925,43 +762,13 @@ $$</p>
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "navigation.prune", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f13b1293.min.js"></script>
-      
-        <script src="../../../javascripts/mathjax.js"></script>
+      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
         <script src="../../../javascripts/katex.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.17.1/flowchart.min.js"></script>
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-mindmap@9.3.0/dist/diagram-definition.0faef4c2.min.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/markdown-it-plantuml@1.4.1/index.min.js"></script>
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml.js"></script>
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml-full.js"></script>
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-svg-full.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"></script>
       
     
   </body>
