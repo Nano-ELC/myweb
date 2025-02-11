@@ -1,23 +1,16 @@
----
-title:My docs
-description: a simple web site
----
-# Welcome to MkDocs
+# 首页
+<!-- 名人名言部分 -->
+<div class="hero-quote">
+  <div class="overlay"></div>
+  <div class="text">
+    <h2>I never had any “Eureka!” moments.</h2>
+    <p>—— Robert Norton Noyce</p>
+  </div>
+</div>
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+**早上好！**:smile:
 
-## Commands
+欢迎来到Nano-ELC的个人网站
+这里有我自己整理的课程笔记，以及一些读书杂谈
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
-
-## 网站施工中……
+## 网站还在施工中，更多内容敬请期待……

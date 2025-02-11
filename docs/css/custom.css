@@ -1,24 +1,25 @@
-/* 调整右侧TOC的位置和宽度 */
-.md-sidebar--secondary {
-    right: 0px !important;      /* 距离右侧20像素 */
-    width: 220px !important;     /* 调整TOC宽度 */
-    margin-left: 30px !important; /* 可选：增加左边距避免靠近内容 */
-}
-
-/* 调整正文内容区域，避免被TOC遮挡 */
-.md-main__inner {
-    margin-right: 300px !important; /* 根据TOC宽度调整 */
-}
-
-/* 可选：调整TOC内部链接的样式 */
-.md-sidebar--secondary .md-nav__link {
-    padding: 4px 10px;
-}
-@media screen and (max-width: 768px) {
-    .md-sidebar--secondary {
-        display: none !important;
+/* 默认 Logo */
+.md-logo img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* 移动端 Logo */
+  @media screen and (max-width: 76.1875em) {
+    .md-logo img {
+      width: 32px;
+      height: 32px;
     }
-    .md-main__inner {
-        margin-right: 0 !important;
-    }
-}
+  }
+  
+  /* 暗色主题 Logo */
+  [data-md-color-scheme="slate"] .md-logo img {
+    filter: invert(1);
+  }
+  .md-logo img {
+    transition: transform 0.3s ease;
+  }
+  
+  .md-logo img:hover {
+    transform: scale(1.2);
+  }
