@@ -1,0 +1,14 @@
+body::before {
+    content: "";
+    background-image: url('../docs/assets/indexbackground.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8; /* 设置透明度 */
+    z-index: -1;
+  }
+  
