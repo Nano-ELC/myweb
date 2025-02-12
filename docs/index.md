@@ -1,6 +1,8 @@
 ---
-comments:true
+title: "首页"
+comments: true
 ---
+
 # 首页
 <!-- 名人名言部分 -->
 <div class="hero-quote">
