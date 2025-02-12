@@ -1,5 +1,9 @@
 ---
-comments:true
+title: Analpart2-13
+description: Analpart2-13
+keywords: 数学分析,级数,函数列级数
+author: Nano-ELC
+comments: true
 ---
 
 # 数学分析Ⅱ（H）

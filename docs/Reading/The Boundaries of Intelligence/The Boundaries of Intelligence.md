@@ -1,5 +1,9 @@
 ---
-comments:true
+title: The Boundaries of Intelligence
+description: thinking on The Boundaries of Intelligence
+keywords: 智慧的疆界,读书笔记
+author: Nano-ELC
+comments: true
 ---
 # 打破智慧的疆界：你，无可替代
 ##                                                                ——基于《智慧的疆界》阅读的综合分析

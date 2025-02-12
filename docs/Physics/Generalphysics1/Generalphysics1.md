@@ -1,5 +1,9 @@
 ---
-comments:true
+title: Generalphysics1
+description: Generalphysics1
+keywords: 普通物理学,笔记
+author: Nano-ELC
+comments: true
 ---
 # 普通物理学
 

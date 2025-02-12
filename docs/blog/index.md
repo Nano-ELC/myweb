@@ -1,7 +1,11 @@
 ---
+title: 博客首页
+description: blog index page
+keywords: 读书杂谈, 笔记整理, 知识分享, 博客
+author: Nano-ELC
+comments: true
 draft: true
 data: 2025-02-12
-name: Nano-ELC
 pin: true
 categories:
     - Hello
