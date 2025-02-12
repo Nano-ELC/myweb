@@ -23,3 +23,12 @@
   .md-logo img:hover {
     transform: scale(1.2);
   }
+
+  /*cc98图标*/
+  .cc98-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background: url("../assets/icons/cc98.png") no-repeat center;
+    background-size: contain;
+}

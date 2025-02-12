@@ -6,11 +6,15 @@ repo_url: https://github.com/Nano-ELC/myweb
 repo_name: myweb
 copyright: "&copy; 2025 Mydocs Nano-ELC"
 plugins:
+  - meta
   - blog
   - social:
       cards_layout_options:
         font_family: Noto Sans SC
-
+  - search:
+      lang:
+        - en
+        - zh
 nav:
   - Home: index.md
   - 数理基础:
@@ -20,10 +24,11 @@ nav:
       - 普通物理学Ⅰ(H): Physics/Generalphysics1/Generalphysics1.md
   - 读书杂谈:
     - 智慧的疆界: Reading/The Boundaries of Intelligence/The Boundaries of Intelligence.md
-
+  - Blog:
+    - 第一篇博客: blog/index.md
 theme:
   name: material
-  custom_dir: background
+  custom_dir: overrides
   logo: assets/logo.png
   palette:
     # 根据系统设置自动切换模式
@@ -60,7 +65,8 @@ theme:
     - search.suggest # 搜索自动补全
     - search.highlight # 搜索高亮
     - search.share # 通过按钮使搜索内容生成分享链接
-
+  # 页眉
+    - header.autohide
 markdown_extensions:
   - admonition # MKdocs 警告框
   - footnotes # 脚注
@@ -103,6 +109,7 @@ extra_javascript:
 - javascripts/katex.js 
 - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js
 - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js
+# - javascripts/ga4.js # 网页数据统计
 # # mermaid的配置脚本，字体大小，图表颜色等。
 # - themes/js/optionalConfig.js\
 # # mermaid的加载脚本，也可以在这里配置mermaid
@@ -115,6 +122,17 @@ extra_javascript:
 # - https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js
 # - https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-mindmap@9.3.0/dist/mermaid-mindmap.esm.min.mjs
 
+extra:
+  analytics:
+    provider: google
+    property: G-J16B5YYFB4
+    events: true
+    behavior: true
+
+# extra:
+#   social:
+#     - icon: cc98-icon
+#       link: http://www-cc98-org-s.webvpn.zju.edu.cn:8001/usercenter
 
 
 # extra_files:
