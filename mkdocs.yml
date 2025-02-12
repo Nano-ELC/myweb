@@ -26,6 +26,9 @@ nav:
     - 智慧的疆界: Reading/The Boundaries of Intelligence/The Boundaries of Intelligence.md
   - Blog:
     - 第一篇博客: blog/index.md
+  - 未竟之旅:
+    - Markdown不完全指北: VoyageLeftUndone/markdown/mymarkdown.md
+    # - Mcdocs踩坑小记: 
 theme:
   name: material
   custom_dir: overrides
