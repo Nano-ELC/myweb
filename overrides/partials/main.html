@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {{ super() }}
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+{% endblock %}
+
+{% block footer %}
+  {{ super() }}
+  <div class="md-footer-meta md-typeset" style="text-align: center; padding-bottom: 20px;">
+    <span id="busuanzi_container_site_pv">
+      本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    </span>
+    <span style="margin: 0 10px;">|</span>
+    <span id="busuanzi_container_site_uv">
+      本站访客数 <span id="busuanzi_value_site_uv"></span> 人
+    </span>
+    </div>
+{% endblock %}

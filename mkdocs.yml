@@ -19,7 +19,7 @@ nav:
   - Home: index.md
   - 数理基础:
     - MATH:
-      - 数学分析Ⅱ(H): Math/Analysis/Analysis.md
+      - 数学分析Ⅱ(H): Math/Analysis/Analysis_pdf.md
     - Physics:
       - 普通物理学Ⅰ(H): Physics/Generalphysics1/Generalphysics1.md
   - 读书杂谈:
