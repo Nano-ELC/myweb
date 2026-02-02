@@ -1032,18 +1032,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#定理-136-Abel判别法" class="md-nav__link">
+  <a href="#定理-136-阿贝尔判别法" class="md-nav__link">
     <span class="md-ellipsis">
-      定理 13.6 Abel判别法
+      定理 13.6 阿贝尔判别法
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#定理-137-Dirichlet判别法" class="md-nav__link">
+  <a href="#定理-137-狄利克雷判别法" class="md-nav__link">
     <span class="md-ellipsis">
-      定理 13.7 Dirichlet判别法
+      定理 13.7 狄利克雷判别法
     </span>
   </a>
   
@@ -1096,8 +1096,8 @@
 <h2 id="第十二章-数项级数">第十二章 数项级数<a class="headerlink" href="#第十二章-数项级数" title="Permanent link">&para;</a></h2>
 <h3 id="S0预备上极限与下极限"><span class="arithmatex">\(\S0\,\)</span>预备：上极限与下极限<a class="headerlink" href="#S0预备上极限与下极限" title="Permanent link">&para;</a></h3>
 <p>定义：</p>
-<p>上极限： <span class="arithmatex">\(\overline{A}=\lim\limits_{n\to\infin}  \sup\,{a_n}\)</span></p>
-<p>下极限： <span class="arithmatex">\(\underline{A}=\lim\limits_{n\to\infin}  \inf\,{a_n}\)</span></p>
+<p>上极限： <span class="arithmatex">\(\overline{A}=\lim\limits_{n\to\infty} \sup\,{a_n}\)</span></p>
+<p>下极限： <span class="arithmatex">\(\underline{A}=\lim\limits_{n\to\infty} \inf\,{a_n}\)</span></p>
 <p>有如下重要定理：</p>
 <ul>
 <li><strong>定理 7.4 有界数列至少有一个聚点，且存在最大聚点和最小聚点</strong></li>
@@ -1105,7 +1105,7 @@
 <p><font color="blue">这里的最大聚点和最小聚点分别是上下极限的另一种定义，证明时类似于聚点定理的证明，只是在选取子区间时，若优先选择右边的区间，则得到的是最大聚点，最小聚点同理.</font></p>
 <ul>
 <li>
-<p><strong>定理 7.5 对任何有界数列<span class="arithmatex">\(\mathrm\{x_n\}: \underline {\lim \limits_{n \to \infty}}x_n \le \overline{\lim \limits_{n \to \infty}}x_n\)</span></strong></p>
+<p><strong>定理 7.5 对任何有界数列<span class="arithmatex">\(\{x_n\}: \underline{\lim\limits_{n\to\infty}}x_n \le \overline{\lim\limits_{n\to\infty}}x_n\)</span></strong></p>
 </li>
 <li>
 <p><strong>定理 7.6 <span class="arithmatex">\(\lim\limits_{{n \to \infty}} x_n = A \iff \overline{A}=\underline{A}\)</span></strong></p>
@@ -1227,7 +1227,7 @@ $$
 <h5 id="定理-1211-莱布尼茨判别法">定理 12.11 莱布尼茨判别法<a class="headerlink" href="#定理-1211-莱布尼茨判别法" title="Permanent link">&para;</a></h5>
 <div class="arithmatex">\[
 \begin{aligned}
-若交错级数\sum u_n满足:\\\\
+若交错级数\sum u_n满足:\\\\\
 1.数列单调递减&amp;\\\\
 2.\lim\limits_{n\to\infty}u_n=0\\\\
 则级数收敛
@@ -1247,13 +1247,25 @@ $$
 <p><a href="https://www.bilibili.com/video/BV1ti421y7z6?vd_source=aae27a9ebb9ec8d489da9ae5a49f0c44">黎曼级数定理：条件收敛级数经过重排后可以得到任何实数，甚至发散 </a></p>
 <h4 id="3D-A判别法">3.D-A判别法<a class="headerlink" href="#3D-A判别法" title="Permanent link">&para;</a></h4>
 <h5 id="定理1215-阿贝尔判别法">定理12.15 阿贝尔判别法<a class="headerlink" href="#定理1215-阿贝尔判别法" title="Permanent link">&para;</a></h5>
-<ul>
-<li><span class="arithmatex">\(\{a_n\}单调有界，且级数\sum b_n 收敛，则级数\sum a_nb_n收敛\)</span></li>
-</ul>
+<div class="arithmatex">\[
+\begin{aligned}
+ &amp;若有\mathrm：\\\\
+ &amp;1. \sum u_n(x) 在区间I上一致收敛\\\\
+ &amp;2. 对于每一个x \in I,\set{v_n(x)}单调\\\\
+ &amp;3.\set{v_n(x)}在I上一致有界\\\\
+ &amp;则级数\sum a_nb_n(x)在I上一致收敛
+ \end{aligned}
+\]</div>
 <h5 id="定理1216-狄利克雷判别法">定理12.16 狄利克雷判别法<a class="headerlink" href="#定理1216-狄利克雷判别法" title="Permanent link">&para;</a></h5>
-<ul>
-<li><span class="arithmatex">\(\{an\}单调递减趋于0，级数\sum b_n部分和数列有界，则级数\sum a_nb_n收敛\)</span></li>
-</ul>
+<div class="arithmatex">\[
+\begin{aligned}
+ &amp;若有：\\\\
+ &amp;1. \sum u_n(x) 的部分和函数列S_n(x)在I上一致有界\\\\
+ &amp;2. 对于每一个x \in I,\set{v_n(x)}单调\\\\
+ &amp;3.在I上\set{v_n(x)}\rightrightarrows0\\\\
+ &amp;则级数\sum a_nb_n(x)在I上一致收敛
+ \end{aligned}
+\]</div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>若 <span class="arithmatex">\(\{a_n\}\)</span> 满足 $ a_1\ge a_2\ge \cdots \ge a_n \ge \cdots ,\lim\limits_{n\to\infty}a_n=0,$</p>
@@ -1292,35 +1304,35 @@ $$
 <li>
 <p>函数列极限的<span class="arithmatex">\(\epsilon-N\)</span>定义：
    $$
-   若有一定义在D上的函数f,\forall固定的x,\forall \epsilon&gt;0 ,\exists N(\epsilon ,x)&gt;0,使得当n&gt;N时，总有：\\
-   |f_n(x)-f(x)|&lt;\epsilon\\
+   若有一定义在D上的函数f,\forall固定的x,\forall \epsilon&gt;0 ,\exists N(\epsilon ,x)&gt;0,使得当n&gt;N时，总有：\
+   |f_n(x)-f(x)|&lt;\epsilon\
    则称函数列的极限函数为f，记为\lim\limits _{n\to\infty}f_n(x)=f(x)
    $$</p>
 </li>
 <li>
-<p>e.g.
-$$
-函数列 f_n(x)=x^n，其收敛域为(-1,1]，且有极限函数
+<p>e.g.</p>
+</li>
+</ol>
+<p>函数列 <span class="arithmatex">\(f_n(x)=x^n\)</span>，其收敛域为<span class="arithmatex">\((-1,1]\)</span>，且有极限函数</p>
+<div class="arithmatex">\[
 f(x)=\begin{cases}
 0,&amp;|x|&lt;1,\\
 1,&amp;x=1.
 \end{cases}
-$$
-证明：
-$$
-\forall \,0&lt;\epsilon&lt;1,0&lt;|x|&lt;1时,|f_n(x)-f(x)|=x^n,只要取N(\epsilon,x)=\frac{\ln\epsilon}{\ln|x|},当n&gt;N时就有\\
-|f_n(x)-f(x)|&lt;\epsilon \\
-当x=0或x=1时，|f_n(x)-f(x)|=0&lt;\epsilon \\
-证毕.
-$$</p>
-</li>
-<li>
-<p>函数列一致收敛的<span class="arithmatex">\(\epsilon-N\)</span>定义：</p>
-</li>
+\]</div>
+<p>证明：</p>
+<p>对于任意 <span class="arithmatex">\(0&lt;\epsilon&lt;1\)</span>：</p>
+<ul>
+<li>当 <span class="arithmatex">\(0&lt;|x|&lt;1\)</span> 时，<span class="arithmatex">\(|f_n(x)-f(x)|=x^n\)</span>，只要取 <span class="arithmatex">\(N(\epsilon,x)=\frac{\ln\epsilon}{\ln|x|}\)</span>，当 <span class="arithmatex">\(n&gt;N\)</span> 时就有 <span class="arithmatex">\(|f_n(x)-f(x)|&lt;\epsilon\)</span>。</li>
+<li>当 <span class="arithmatex">\(x=0\)</span> 或 <span class="arithmatex">\(x=1\)</span> 时，<span class="arithmatex">\(|f_n(x)-f(x)|=0&lt;\epsilon\)</span>。</li>
+</ul>
+<p>证毕。</p>
+<ol>
+<li>函数列一致收敛的<span class="arithmatex">\(\epsilon-N\)</span>定义：</li>
 </ol>
 <div class="arithmatex">\[
 \forall \epsilon&gt;0,\exists N&gt;0,当n&gt;N时，\forall x\in D,|f_n(x)-f(x)|&lt;\epsilon \\
-则称函数列在D上一致收敛于f，记作\\\\
+则称函数列在D上一致收敛于f，记作\\
 f_n(x) \rightrightarrows f(x)\,(n\rightarrow \infty),x\in D
 \]</div>
 <h5 id="定理131-函数列一致收敛的柯西准则">定理13.1 函数列一致收敛的柯西准则<a class="headerlink" href="#定理131-函数列一致收敛的柯西准则" title="Permanent link">&para;</a></h5>
@@ -1346,7 +1358,7 @@ f_n(x) \rightrightarrows f(x)\,(n\rightarrow \infty),x\in D
 <ol>
 <li>定义与概念：</li>
 </ol>
-<p>函数项级数的相关概念实际上就是将函数列与级数的概念”拼凑“了起来</p>
+<p>函数项级数的相关概念实际上就是将函数列与级数的概念"拼凑"了起来</p>
 <ul>
 <li>函数项级数与部分和函数列：</li>
 </ul>
@@ -1372,7 +1384,7 @@ f_n(x) \rightrightarrows f(x)\,(n\rightarrow \infty),x\in D
 <p><font color="brown">函数项级数的一致收敛本质上不过是它的部分和函数列的收敛性，因此所有判定函数列一致收敛的定理全都可以移植到函数项级数上来</font></p>
 <h5 id="定理-133-一致收敛的柯西准则">定理 13.3 一致收敛的柯西准则<a class="headerlink" href="#定理-133-一致收敛的柯西准则" title="Permanent link">&para;</a></h5>
 <div class="arithmatex">\[
-函数项级数\sum u_n(x)在数集D上一致收敛\iff \forall \epsilon, \exists N, 使得当n&gt;N时，对一切x \in  D 和一切正整数p,都有\\\\
+函数项级数\sum u_n(x)在数集D上一致收敛\iff \forall \epsilon, \exists N, 使得当n&gt;N时，对一切x \in  D 和一切正整数p,都有\\
 |S_{n+p}(x)-S_n(x)|=|u_{n+1}(x) + u_{n+2}(x)+\cdots + u_{n+p}(x) |&lt; \epsilon
 \]</div>
 <p><strong>推论</strong> 令p=1，可以得到函数项级数一致收敛的一个必要条件：函数列<span class="arithmatex">\({u_n(x)}\)</span>在<span class="arithmatex">\(D\)</span>上 <strong>一致收敛</strong> 于0</p>
@@ -1382,7 +1394,7 @@ f_n(x) \rightrightarrows f(x)\,(n\rightarrow \infty),x\in D
 <h5 id="定理-135-Weierstrass判别法">定理 13.5  Weierstrass判别法<a class="headerlink" href="#定理-135-Weierstrass判别法" title="Permanent link">&para;</a></h5>
 <p><span class="arithmatex">\(设函数项级数\sum u_n(x)定义在D上,\sum M_n为收敛的\textbf{正项级数(不含x)}，若对一切x\in D,|u_n(x)|\le M_n,n=1,2,\cdots,则\sum u_n(x)在D上一致收敛\)</span></p>
 <p>证明：利用数项级数的柯西收敛，又有关于<span class="arithmatex">\(\sum u_n\)</span>的不等式，结合绝对值不等式可得</p>
-<h5 id="定理-136-Abel判别法">定理 13.6 Abel判别法<a class="headerlink" href="#定理-136-Abel判别法" title="Permanent link">&para;</a></h5>
+<h5 id="定理-136-阿贝尔判别法">定理 13.6 阿贝尔判别法<a class="headerlink" href="#定理-136-阿贝尔判别法" title="Permanent link">&para;</a></h5>
 <div class="arithmatex">\[
 \begin{aligned}
  &amp;若有\mathrm：\\\\
@@ -1392,7 +1404,7 @@ f_n(x) \rightrightarrows f(x)\,(n\rightarrow \infty),x\in D
  &amp;则级数\sum u_n(x)v_n(x)在I上一致收敛
  \end{aligned}
 \]</div>
-<h5 id="定理-137-Dirichlet判别法">定理 13.7 Dirichlet判别法<a class="headerlink" href="#定理-137-Dirichlet判别法" title="Permanent link">&para;</a></h5>
+<h5 id="定理-137-狄利克雷判别法">定理 13.7 狄利克雷判别法<a class="headerlink" href="#定理-137-狄利克雷判别法" title="Permanent link">&para;</a></h5>
 <div class="arithmatex">\[
 \begin{aligned}
  &amp;若有：\\\\
@@ -1555,6 +1567,8 @@ f_n(x) \rightrightarrows f(x)\,(n\rightarrow \infty),x\in D
         <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
       
         <script src="../../../javascripts/ga4.js"></script>
+      
+        <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
       
     
   </body>
