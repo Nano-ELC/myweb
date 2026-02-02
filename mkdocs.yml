@@ -113,6 +113,7 @@ extra_javascript:
 - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js
 - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js
 - javascripts/ga4.js # 网页数据统计
+- https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # 访问量统计
 # # mermaid的配置脚本，字体大小，图表颜色等。
 # - themes/js/optionalConfig.js\
 # # mermaid的加载脚本，也可以在这里配置mermaid
