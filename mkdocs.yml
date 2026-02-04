@@ -1,143 +1,213 @@
+# 项目信息
 site_name: Nano-ELC's Docs
 site_url: https://nano-elc.github.io/myweb/
-site_description: 一个知识分享与读书杂谈的博客网站
 site_author: Nano_ELC
-repo_url: https://github.com/Nano-ELC/myweb
+site_description: 一个知识分享与读书杂谈的博客网站
+# 代码仓库信息
 repo_name: myweb
-copyright: "&copy; 2025 Mydocs Nano-ELC"
-plugins:
-  - meta
-  - blog
-  - social:
-      cards_layout_options:
-        font_family: Noto Sans SC
-  - search:
-      lang:
-        - en
-        - zh
-nav:
-  - Home: index.md
-  - 数理基础:
-    - MATH:
-      - 数学分析Ⅱ(H): Math/Analysis/Analysis_pdf.md
-    - Physics:
-      - 普通物理学Ⅰ(H): Physics/Generalphysics1/Generalphysics1.md
-  - 读书杂谈:
-    - 智慧的疆界: Reading/The Boundaries of Intelligence/The Boundaries of Intelligence.md
-  - Blog:
-    - 第一篇博客: blog/index.md
-  - 未竟之旅:
-    - Markdown不完全指北: VoyageLeftUndone/markdown/mymarkdown.md
-    # - Mcdocs踩坑小记: 
+repo_url: https://github.com/Nano-ELC/myweb
+
+# 版权信息
+copyright: "&copy; 2026 Mydocs Nano-ELC"
+
+# 配置
 theme:
-  name: material
+  favicon: assets/logo.png
   custom_dir: overrides
+  name: material
   logo: assets/logo.png
+  language: zh
+  features:
+    - announce.dismiss
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - content.tooltips
+
+    - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.path
+    - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
   palette:
-    # 根据系统设置自动切换模式
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/brightness-auto
-        name: Switch to light mode
-    # 手动切换浅色模式
     - media: "(prefers-color-scheme: light)"
-      primary: cyan # 网站主颜色
-      accent: amber # 强调色
-      scheme: default
+      scheme: theme
+      primary: cyan
+      accent: amber
       toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    # 手动切换深色模式
+        icon: material/weather-night
+        name: 万籁俱寂
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: black
+      accent: custom
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
-  # 即时加载功能
-  features:
-  # 导航相关特性
-    - navigation.instant # 启用即时导航，通过 AJAX 异步加载页面，切换更流畅
-    - navigation.instant.progress # 即时导航时显示进度条，展示页面加载进度
-    - navigation.tabs # 启用导航标签，方便快速切换文档分类
-    - navigation.tabs.sticky # 使导航标签固定在页面顶部，随时可操作
-    - navigation.sections # 启用导航部分分组，让导航结构更清晰
-    - navigation.expand # 展开所有导航菜单，默认显示全量层级链接
-    - navigation.path # 在导航栏显示当前页面路径，明确位置
-    - navigation.prune # 修剪导航菜单，隐藏无关项使导航更简洁
-  # 搜索相关特性
-    - search.suggest # 搜索自动补全
-    - search.highlight # 搜索高亮
-    - search.share # 通过按钮使搜索内容生成分享链接
-  # 页眉
-    - header.autohide
+        name: 萧瑟凌晨
+    - media: "(prefers-color-scheme: no-preference)"
+      scheme: simple
+      primary: cyan
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: 烈日灼心
+
+  icon:
+    logo: logo
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+    admonition:
+      info: fontawesome/solid/rocket
+      note: fontawesome/solid/pen-fancy
+      abstract: fontawesome/solid/list
+      tip: fontawesome/solid/lightbulb
+      success: fontawesome/solid/check
+      question: fontawesome/solid/hand
+      warning: fontawesome/solid/triangle-exclamation
+      failure: material/alien
+      danger: fontawesome/solid/virus
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/ship
+      quote: fontawesome/solid/link
+    tag:
+      default-tag: fontawesome/solid/tag
+      hardware-tag: fontawesome/solid/microchip
+      software-tag: fontawesome/solid/laptop-code
+
+# Plugins
+plugins:
+  - blog
+  - statistics:
+      words_per_minute: 290   
+  - tags
+  - search
+
+# 导航树
+nav:
+  - 首页: index.md
+  - 学习笔记:
+    - 笔记首页: NOTE/index.md
+    - 数理基础:
+      - 数学分析Ⅱ(H): NOTE/Math/Analysis/Analysis_pdf.md
+      - 普通物理学Ⅰ(H): NOTE/Physics/Generalphysics1/Generalphysics1.md
+  - Hertoffee: blog/index.md
+  - 读书杂谈:
+    - 杂谈首页: Reading/index.md
+    - 智慧的疆界: Reading/The Boundaries of Intelligence/The Boundaries of Intelligence.md
+  - 未竟之旅:
+    - 之旅首页: VoyageLeftUndone/index.md
+    - Markdown不完全指北: VoyageLeftUndone/markdown/mymarkdown.md
+
+# Markdown 扩展
 markdown_extensions:
-  - admonition # MKdocs 警告框
-  - footnotes # 脚注
-  - meta # 自定义文章元数据
-  - pymdownx.caret # 下划线
-  - pymdownx.mark # 文本高亮
-  - pymdownx.tilde # 删除线
-  - attr_list # 支持缩放图片
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 4
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:
       smart_enable: all
-  - pymdownx.critic 
-  - pymdownx.details # 折叠块支持
+  - pymdownx.caret
+  - pymdownx.details
   - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
-  - pymdownx.inlinehilite # 代码片段语法高亮
-  - pymdownx.magiclink # 超链接
-  - pymdownx.smartsymbols # 更好看
-  - pymdownx.superfences: # 支持嵌套代码块和代码块标题
-      custom_fences: #配置mermaid支持
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      use_pygments: true
+      noclasses: false
+      css_class: highlight
+      linenums_style: table
+      linenums_special: 1
+      linenums_class: linenums
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
+  - pymdownx.superfences:
+      custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - pymdownx.tasklist:
-      custom_checkbox: true # 自定义复选框
-      clickable_checkbox: true # 可点击
-  - md_in_html
-  - meta
-  - toc: #大纲
-      permalink: true
-      slugify: !!python/object/apply:pymdownx.slugs.slugify {} # 原写法已弃用，现要加上{}
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.critic:
+      mode: view
+
+extra_javascript:
+  - javascripts/katex.js
+  - javascripts/katex.min.js
+  - javascripts/auto-render.min.js
+  - javascripts/card.js
+  - javascripts/toc.js
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
+
 
 extra_css:
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css
-  - css/custom.css # Logo动画
-  - css/extra.css # 背景图片与首页名言的视觉效果
-  # - background/background.css(也许有一天可以搞出来)
-extra_javascript:
-- javascripts/katex.js 
-- https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js
-- https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js
-- javascripts/ga4.js # 网页数据统计
-- https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # 访问量统计
-# # mermaid的配置脚本，字体大小，图表颜色等。
-# - themes/js/optionalConfig.js\
-# # mermaid的加载脚本，也可以在这里配置mermaid
-# - themes/js/mermaidloader.js
-# - themes/js/umlconvert.js
-# # mermaid渲染
-# - https://unpkg.com/mermaid@10.0.2/dist/mermaid.esm.min.mjs
-# - https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.17.1/flowchart.min.js
-# - https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js
-# - https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js
-# - https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-mindmap@9.3.0/dist/mermaid-mindmap.esm.min.mjs
+  - css/katex.min.css
+  - css/cards.css
+  - css/card.css
+  - css/newfonts.css
+  - css/newadmonitions.css
+  - css/newcolor.css 
+  - css/changelogs.css
+  - css/tableandsize.css
+  - css/flink.css
+  - css/float_card.css
+  - css/fdtoc.css
+  - css/tocindex.css
+  - css/extra.css
+  - https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.css
+  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
 
+# 额外配置
 extra:
+  generator: false
+  status:
+    new: Recently added
+    deprecated: Deprecated
   analytics:
     provider: google
     property: G-J16B5YYFB4
     events: true
     behavior: true
-
-# extra:
-#   social:
-#     - icon: cc98-icon
-#       link: http://www-cc98-org-s.webvpn.zju.edu.cn:8001/usercenter
-
-
-# extra_files:
-#   - Math/Analysis/Analysis.pdf
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Nano-ELC
+      name: My GitHub
+  tags:
+    Default: default-tag
+    Hardware: hardware-tag
+    Software: software-tag
