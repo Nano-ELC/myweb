@@ -45,21 +45,14 @@ theme:
       accent: amber
       toggle:
         icon: material/weather-night
-        name: 万籁俱寂
+        name: 浅色
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
       accent: custom
       toggle:
         icon: material/brightness-4
-        name: 萧瑟凌晨
-    - media: "(prefers-color-scheme: no-preference)"
-      scheme: simple
-      primary: cyan
-      accent: amber
-      toggle:
-        icon: material/weather-sunny
-        name: 烈日灼心
+        name: 深色
 
   icon:
     logo: logo
@@ -98,15 +91,14 @@ nav:
     - 笔记首页: NOTE/index.md
     - 数理基础:
       - 数学分析Ⅱ(H): NOTE/Math/Analysis/Analysis_pdf.md
-      - 普通物理学Ⅰ(H): NOTE/Physics/Generalphysics1/Generalphysics1.md
+      - 普通物理学Ⅱ(H): NOTE/Physics/Generalphysics2/Generalphysics2.md
   - Hertoffee: blog/index.md
   - 读书杂谈:
-    - 杂谈首页: Reading/index.md
+    - ElegantNonsencials: Reading/index.md
     - 智慧的疆界: Reading/The Boundaries of Intelligence/The Boundaries of Intelligence.md
   - 未竟之旅:
-    - 之旅首页: VoyageLeftUndone/index.md
+    - VoyageLeftUndone: VoyageLeftUndone/index.md
     - Markdown不完全指北: VoyageLeftUndone/markdown/mymarkdown.md
-
 # Markdown 扩展
 markdown_extensions:
   - abbr
@@ -167,27 +159,15 @@ markdown_extensions:
       mode: view
 
 extra_javascript:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js
   - javascripts/katex.js
-  - javascripts/katex.min.js
-  - javascripts/auto-render.min.js
-  - javascripts/card.js
-  - javascripts/toc.js
+  - javascripts/pdf-optimizer.js
   - https://unpkg.com/mermaid/dist/mermaid.min.js
 
 
 extra_css:
-  - css/katex.min.css
-  - css/cards.css
-  - css/card.css
-  - css/newfonts.css
-  - css/newadmonitions.css
-  - css/newcolor.css 
-  - css/changelogs.css
-  - css/tableandsize.css
-  - css/flink.css
-  - css/float_card.css
-  - css/fdtoc.css
-  - css/tocindex.css
+  - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css
   - css/extra.css
   - https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.css
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css

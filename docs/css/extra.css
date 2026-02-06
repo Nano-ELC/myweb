@@ -813,47 +813,102 @@ iframe[src*="viewer.html"],
     display: none !important;
 }
 
-/* === 导航栏容器：透明 + 绝对定位（悬浮在背景上） === */
+/* ========= 1. 全局导航栏设置 (默认浅色模式) ========= */
+/* 设定一个浅浅的灰蓝色背景，像毛玻璃一样 */
 .md-header {
-    background: transparent !important;
-    background-color: transparent !important;
-    box-shadow: none !important;
-    position: initial !important; /* 让导航栏与内容平滑对接 */
+    background-color: rgba(240, 244, 248, 0.9) !important; /* 薄雾灰蓝 */
+    backdrop-filter: blur(10px); /* 毛玻璃模糊 */
+    color: #333333 !important; /* 默认文字深灰色 */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important; /* 微微的阴影，区分正文 */
+    position: initial !important;
     width: 100%;
     z-index: 100;
 }
 
-/* 导航栏文字颜色 */
+/* 在浅色背景上，GitHub 图标必须是深色才能看见 */
+.md-header__source .md-source__icon svg {
+    fill: #00796b !important; /* 使用深青色 (Teal)，比荧光色更有质感且清晰 */
+    filter: none !important; /* 浅色背景不需要发光滤镜 */
+    transition: all 0.3s ease;
+}
+.md-header__source .md-source__fact {
+    color: #00796b !important; /* 文字也用深青色 */
+    transition: all 0.3s ease;
+}
+
+/* 导航栏标题和链接变成深色，防止看不见 */
 .md-header__title,
 .md-header__title .md-ellipsis,
 .md-tabs__link,
-.md-header__button {
-    /* 设置固定的深色文字，确保在青色背景下也能清晰可读 */
-    color: #333333 !important;
-    /* 添加阴影，确保在任何背景下文字都清晰可读 */
-    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5) !important;
+.md-header__button,
+.md-header__button svg {
+    color: #2c3e50 !important; /* 深蓝灰色 */
+    fill: #2c3e50 !important;
+    text-shadow: none !important; /* 去掉阴影，保持干净 */
     font-weight: 500; /*稍微加粗一点点*/
+}
+
+/* 选中状态的导航项颜色 */
+.md-tabs__item--active .md-tabs__link {
+    color: #00796b !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+}
+
+/* 鼠标悬停交互：变白高亮 */
+.md-header__source:hover .md-source__icon svg {
+    fill: #ffffff !important;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8)) !important; /* 悬停时发白光 */
+}
+.md-header__source:hover .md-source__fact {
+    color: #ffffff !important;
+}
+
+/* 深色模式下的导航栏设置 */
+[data-md-color-scheme="slate"] .md-header {
+    background-color: rgba(30, 41, 59, 0.9) !important; /* 深色背景 */
+    backdrop-filter: blur(10px); /* 毛玻璃模糊 */
+    color: #ffffff !important; /* 文字白色 */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important; /* 微微的阴影 */
 }
 
 /* 深色模式下的导航栏文字颜色 */
 [data-md-color-scheme="slate"] .md-header__title,
 [data-md-color-scheme="slate"] .md-header__title .md-ellipsis,
 [data-md-color-scheme="slate"] .md-tabs__link,
-[data-md-color-scheme="slate"] .md-header__button {
+[data-md-color-scheme="slate"] .md-header__button,
+[data-md-color-scheme="slate"] .md-header__button svg {
     color: #ffffff !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+    fill: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
 }
 
-/* 选中状态的导航项颜色 */
-.md-tabs__item--active .md-tabs__link {
-    color: #000000 !important;
+/* 深色模式下的 GitHub 图标 */
+[data-md-color-scheme="slate"] .md-header__source .md-source__icon svg {
+    fill: #00f0ff !important; /* 核心：荧光青填充 */
+    /* 增加霓虹发光效果 */
+    filter: drop-shadow(0 0 2px rgba(0, 240, 255, 0.6)) !important;
+}
+
+/* 深色模式下的 GitHub 文字 */
+[data-md-color-scheme="slate"] .md-header__source .md-source__fact {
+    color: #00f0ff !important;
+    text-shadow: 0 0 2px rgba(0, 240, 255, 0.4) !important; /* 文字也带一点光晕 */
     opacity: 1 !important;
 }
 
 /* 深色模式下选中状态的导航项颜色 */
 [data-md-color-scheme="slate"] .md-tabs__item--active .md-tabs__link {
-    color: #ffffff !important;
+    color: #00f0ff !important;
     opacity: 1 !important;
+    text-shadow: 0 0 2px rgba(0, 240, 255, 0.6) !important;
+}
+
+/* 黑夜模式下的目录边框颜色 */
+[data-md-color-scheme="slate"] .md-sidebar,
+[data-md-color-scheme="slate"] .md-nav__list {
+    border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 /* 因为恢复了 navigation，左侧侧边栏可能会回来挤占空间，强制隐藏它 */

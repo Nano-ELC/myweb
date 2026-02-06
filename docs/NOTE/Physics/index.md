@@ -11,4 +11,4 @@ comments: true
 
 ## 课程列表
 
-- [普通物理学Ⅰ(H)](Generalphysics1/Generalphysics1.md)
+- [普通物理学Ⅱ(H)](Generalphysics2/Generalphysics2.md)
