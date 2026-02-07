@@ -1,0 +1,268 @@
+/* ========================================================================== */
+/* 颜色变量定义 */
+/* ========================================================================== */
+
+:root {
+  /* PDF卡片基础颜色 */
+  --pdf-card-bg: #ffffff;
+  --pdf-card-shadow: rgba(0, 0, 0, 0.1);
+  --pdf-card-shadow-hover: rgba(0, 0, 0, 0.15);
+  --pdf-icon-bg: #ffebee;
+  --pdf-icon-color: #e53935;
+  --pdf-title-color: #212121;
+  --pdf-meta-color: #757575;
+  --pdf-separator-color: #bdbdbd;
+  
+  /* 按钮颜色 */
+  --pdf-btn-gradient-start: #00b4db;
+  --pdf-btn-gradient-end: #0083b0;
+  --pdf-btn-text: #ffffff;
+  --pdf-btn-shadow: rgba(0, 131, 176, 0.2);
+  --pdf-btn-shadow-hover: rgba(0, 131, 176, 0.3);
+  
+  /* 暗黑模式颜色 */
+  --pdf-card-bg-dark: #263238;
+  --pdf-card-shadow-dark: rgba(0, 0, 0, 0.3);
+  --pdf-card-shadow-hover-dark: rgba(0, 0, 0, 0.4);
+  --pdf-icon-bg-dark: #37474f;
+  --pdf-icon-color-dark: #ef5350;
+  --pdf-title-color-dark: #eceff1;
+  --pdf-meta-color-dark: #b0bec5;
+  --pdf-separator-color-dark: #546e7a;
+  --pdf-btn-gradient-start-dark: #00c6ff;
+  --pdf-btn-gradient-end-dark: #0072ff;
+  --pdf-btn-shadow-dark: rgba(0, 114, 255, 0.3);
+}
+
+/* ========================================================================== */
+/* PDF 下载卡片样式 */
+/* ========================================================================== */
+
+/* 主卡片容器 */
+.pdf-card {
+  display: flex;
+  align-items: center;
+  background-color: var(--pdf-card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--pdf-card-shadow);
+  padding: 16px;
+  margin: 16px 0;
+  transition: box-shadow 0.3s ease;
+}
+
+/* 卡片悬停效果 */
+.pdf-card:hover {
+  box-shadow: 0 4px 8px var(--pdf-card-shadow-hover);
+}
+
+/* 图标容器 */
+.pdf-icon-wrapper {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  background-color: var(--pdf-icon-bg);
+  border-radius: 8px;
+}
+
+/* 图标样式 */
+.pdf-icon-wrapper svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--pdf-icon-color);
+  fill: none;
+}
+
+/* 详细信息容器 */
+.pdf-details {
+  flex: 1;
+  min-width: 0;
+}
+
+/* 标题样式 */
+.pdf-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--pdf-title-color);
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+/* 元数据样式 */
+.pdf-meta {
+  font-size: 14px;
+  color: var(--pdf-meta-color);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* 元数据项目样式 */
+.pdf-size, .pdf-pages, .pdf-date {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* 分隔符样式 */
+.pdf-separator {
+  margin: 0 8px;
+  color: var(--pdf-separator-color);
+}
+
+/* ========================================================================== */
+/* 下载按钮样式 - 现代科技风格 */
+/* ========================================================================== */
+
+/* 按钮容器 */
+.pdf-action {
+    margin-left: 16px;
+    flex-shrink: 0; /* 防止按钮被挤压 */
+}
+
+/* 下载按钮 - 酷炫版 */
+.pdf-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+    /* 酷炫的渐变背景 */
+    background: linear-gradient(135deg, var(--pdf-btn-gradient-start) 0%, var(--pdf-btn-gradient-end) 100%);
+    
+    /* 强制高对比度文字 */
+    color: var(--pdf-btn-text) !important;
+    font-weight: 600;
+    font-size: 0.9em;
+    
+    /* 间距与形状 */
+    padding: 10px 20px;
+    border-radius: 50px; /* 胶囊形状，更现代 */
+    text-decoration: none !important;
+    
+    /* 初始阴影与过渡动画 */
+    box-shadow: 0 4px 6px var(--pdf-btn-shadow);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: none;
+}
+
+/* 鼠标悬停交互 */
+.pdf-btn:hover {
+    /* 上浮效果 */
+    transform: translateY(-2px);
+    /* 阴影加深扩散 */
+    box-shadow: 0 7px 14px var(--pdf-btn-shadow-hover);
+    /* 稍微提亮 */
+    filter: brightness(110%);
+}
+
+/* 按钮图标 */
+.pdf-btn svg {
+    width: 18px;
+    height: 18px;
+    stroke-width: 2.5; /* 加粗图标线条 */
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1)); /* 图标微阴影 */
+}
+
+/* 暗黑模式适配 */
+[data-md-color-scheme="slate"] .pdf-card {
+  background-color: var(--pdf-card-bg-dark);
+  box-shadow: 0 2px 4px var(--pdf-card-shadow-dark);
+}
+
+[data-md-color-scheme="slate"] .pdf-card:hover {
+  box-shadow: 0 4px 8px var(--pdf-card-shadow-hover-dark);
+}
+
+[data-md-color-scheme="slate"] .pdf-icon-wrapper {
+  background-color: var(--pdf-icon-bg-dark);
+}
+
+[data-md-color-scheme="slate"] .pdf-icon-wrapper svg {
+  stroke: var(--pdf-icon-color-dark);
+}
+
+[data-md-color-scheme="slate"] .pdf-title {
+  color: var(--pdf-title-color-dark);
+}
+
+[data-md-color-scheme="slate"] .pdf-meta {
+  color: var(--pdf-meta-color-dark);
+}
+
+[data-md-color-scheme="slate"] .pdf-separator {
+  color: var(--pdf-separator-color-dark);
+}
+
+/* 暗黑模式适配 */
+[data-md-color-scheme="slate"] .pdf-btn {
+    /* 暗色模式下稍微调整渐变，使其更发光 */
+    background: linear-gradient(135deg, var(--pdf-btn-gradient-start-dark) 0%, var(--pdf-btn-gradient-end-dark) 100%);
+    box-shadow: 0 4px 10px var(--pdf-btn-shadow-dark);
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+  .pdf-card {
+    padding: 12px;
+  }
+  
+  .pdf-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+  }
+  
+  .pdf-icon-wrapper svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .pdf-title {
+    font-size: 14px;
+  }
+  
+  .pdf-meta {
+    font-size: 12px;
+  }
+  
+  .pdf-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+  
+  .pdf-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pdf-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .pdf-icon-wrapper {
+    margin-right: 0;
+  }
+  
+  .pdf-btn {
+    align-self: flex-start;
+  }
+}
+
+/* 强制提升导航栏层级，解决移动端菜单无法点击的问题 */
+.md-header {
+    z-index: 9999 !important;
+    position: sticky !important; /* 确保它保持固定 */
+}
+
+/* 提升侧边栏层级，防止被内容遮挡 */
+.md-sidebar {
+    z-index: 9998 !important;
+}
+
+/* 确保这行代码存在，彻底移除原本的导航交互 */
+label.md-header__button[for="__drawer"] {
+    display: none !important;
+}
