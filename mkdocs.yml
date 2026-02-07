@@ -12,10 +12,10 @@ copyright: "&copy; 2026 Mydocs Nano-ELC"
 
 # 配置
 theme:
-  favicon: assets/logo.png
+  favicon: assets/logo.svg
   custom_dir: overrides
   name: material
-  logo: assets/logo.png
+  logo: assets/logo.svg
   language: zh
   features:
     - announce.dismiss
@@ -83,6 +83,7 @@ plugins:
       words_per_minute: 290   
   - tags
   - search
+  - macros
 
 # 导航树
 nav:
@@ -159,16 +160,17 @@ markdown_extensions:
       mode: view
 
 extra_javascript:
+  - javascripts/clickable_title.js
   - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js
   - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js
   - javascripts/katex.js
-  - javascripts/pdf-optimizer.js
   - https://unpkg.com/mermaid/dist/mermaid.min.js
 
 
 extra_css:
   - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css
   - css/extra.css
+  - stylesheets/extra.css
   - https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.css
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
 

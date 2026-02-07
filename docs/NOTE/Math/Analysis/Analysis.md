@@ -24,9 +24,9 @@ comments: true
 
 <font color="blue">这里的最大聚点和最小聚点分别是上下极限的另一种定义，证明时类似于聚点定理的证明，只是在选取子区间时，若优先选择右边的区间，则得到的是最大聚点，最小聚点同理.</font>
 
-- **定理 7.5 对任何有界数列$\{x_n\}: \underline{\lim\limits_{n\to\infty}}x_n \le \overline{\lim\limits_{n\to\infty}}x_n$**
+- **定理 7.5 对任何有界数列$\{x_n\}: \underline{\lim\limits_{n\to\infty} }x_n \le \overline{\lim\limits_{n\to\infty}}x_n$**
 
-- **定理 7.6 $\lim\limits_{{n \to \infty}} x_n = A \iff \overline{A}=\underline{A}$**
+- **定理 7.6 $\lim\limits_{ {n \to \infty} } x_n = A \iff \overline{A}=\underline{A}$**
 
 !!! note
     极限的性质(如保号性，保序性)同样适用于上下极限

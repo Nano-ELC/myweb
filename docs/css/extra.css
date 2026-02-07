@@ -820,9 +820,9 @@ iframe[src*="viewer.html"],
     backdrop-filter: blur(10px); /* 毛玻璃模糊 */
     color: #333333 !important; /* 默认文字深灰色 */
     box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important; /* 微微的阴影，区分正文 */
-    position: initial !important;
+    position: sticky !important;
     width: 100%;
-    z-index: 100;
+    z-index: 9999 !important;
 }
 
 /* 在浅色背景上，GitHub 图标必须是深色才能看见 */

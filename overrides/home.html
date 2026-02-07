@@ -10,7 +10,7 @@
       --accent-light: #f78fb3;
     }
 
-    .md-header { position: initial; }
+
     .md-main__inner { margin: 0; }
     .md-content { padding-top: 0; padding-bottom: 0; }
     
@@ -230,9 +230,9 @@
         
         <div class="mdx-hero__stats">
           <div class="status-dot"></div>
-          <span><i class="fontawesome-solid-file-lines" style="margin-right:6px"></i> {{ nav.pages | length }} Notes</span>
+          <span><i class="fontawesome-solid-file-lines" style="margin-right:6px"></i> {{ config.extra.total_notes }} Notes</span>
           <span>|</span>
-          <span><i class="fontawesome-solid-clock" style="margin-right:6px"></i> 2026 Updated</span>
+          <span><i class="fontawesome-solid-clock" style="margin-right:6px"></i> {{ config.extra.build_date }} Updated</span>
         </div>
 
         <div class="mdx-hero__footer">

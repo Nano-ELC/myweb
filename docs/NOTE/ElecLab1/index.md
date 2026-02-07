@@ -15,22 +15,14 @@ comments: true
 
 - **电路定理验证实验**
 
-<iframe
-    src="/myweb/assets/web/viewer.html?file=/myweb/NOTE/ElecLab1/Lab1.pdf"
-    class="pdf-viewer"
-    allowfullscreen>
-</iframe>
+{{ pdf_card("Lab1", "NOTE/ElecLab1/Lab1.pdf", "0.4 MB", "19", "2026-01-21") }}
 
 
 ---
 
 
 - **一阶RC电路**
-<iframe
-    src="/myweb/assets/web/viewer.html?file=/myweb/NOTE/ElecLab1/Lab2.pdf"
-    class="pdf-viewer"
-    allowfullscreen>
-</iframe>
+{{ pdf_card("Lab2", "NOTE/ElecLab1/Lab2.pdf", "6.1 MB", "11", "2026-01-21") }}
 
 
 ---
@@ -38,11 +30,7 @@ comments: true
 
 - **ORCAD使用练习**
 
-<iframe
-    src="/myweb/assets/web/viewer.html?file=/myweb/NOTE/ElecLab1/Lab3.pdf"
-    class="pdf-viewer"
-    allowfullscreen>
-</iframe>
+{{ pdf_card("Lab3", "NOTE/ElecLab1/Lab3.pdf", "1.1 MB", "16", "2026-01-21") }}
 
 
 ---
@@ -50,11 +38,7 @@ comments: true
 
 - **晶体管共射放大电路**
 
-<iframe
-    src="/myweb/assets/web/viewer.html?file=/myweb/NOTE/ElecLab1/Lab4.pdf"
-    class="pdf-viewer"
-    allowfullscreen>
-</iframe>
+{{ pdf_card("Lab4", "NOTE/ElecLab1/Lab4.pdf", "4.4 MB", "22", "2026-01-21") }}
 
 
 ---
@@ -62,11 +46,7 @@ comments: true
 
 - **集成运放探究Ⅰ**
 
-<iframe
-    src="/myweb/assets/web/viewer.html?file=/myweb/NOTE/ElecLab1/Lab5.pdf"
-    class="pdf-viewer"
-    allowfullscreen>
-</iframe>
+{{ pdf_card("Lab5", "NOTE/ElecLab1/Lab5.pdf", "8.6 MB", "12", "2026-01-21") }}
 
 
 ---
@@ -74,8 +54,4 @@ comments: true
 
 - **集成运放探究Ⅱ**
 
-<iframe
-    src="/myweb/assets/web/viewer.html?file=/myweb/NOTE/ElecLab1/Lab6.pdf"
-    class="pdf-viewer"
-    allowfullscreen>
-</iframe>
+{{ pdf_card("Lab6", "NOTE/ElecLab1/Lab6.pdf", "16.2 MB", "11", "2026-01-21") }}

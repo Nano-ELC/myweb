@@ -28,11 +28,7 @@ comments: true
 
 在这里我分享一下个人的大作业，主要是以课上提到的射频电路 $50 \Omega$ 匹配问题切入，电路并不复杂，功夫主要花在后续分析上，合理使用ai情况下3h可以速通（
 
-<iframe
-    src="/myweb/assets/web/viewer.html?file=/myweb/NOTE/ElecBasic/commongate.pdf"
-    class="pdf-viewer"
-    allowfullscreen>
-</iframe>
+{{ pdf_card("commongate", "NOTE/ElecBasic/commongate.pdf", "0.6 MB", "13", "2026-02-06") }}
 
 ### 笔记
 

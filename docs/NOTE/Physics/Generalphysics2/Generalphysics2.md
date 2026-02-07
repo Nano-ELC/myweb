@@ -19,15 +19,15 @@ comments: true
 
 - **期中考试** 范围上基本是电磁学的主要内容，以25-26秋冬为例，考试考察范围是到Maxwell方程组之前，题型为填空(40%)和大题(60%)，**没有选择题**，再加上本来期中的难度就更大，想拿到一个比较好的分数是要投入很多精力的。
 
-  备考上，我推荐**把ppt都过一遍**，之后直接拟合历年卷，**fmh班的期中历年卷可以直接在往年智云最后的一两节课找**，不过24-25，25-26两年老师课程后期都被叫去出卷子了，会在临走前讲卷子
+  备考上，我推荐 **把ppt都过一遍** ，之后直接拟合历年卷，**fmh班的期中历年卷可以直接在往年智云最后的一两节课找**，不过24-25，25-26两年老师课程后期都被叫去出卷子了，会在临走前讲卷子
 
 期中尤其要注意极化和磁化这两个部分的学习，我个人觉得这两个板块理解难度大并且在大题中也经常出现
 
-- **期末考试** 在期中之外增加了光学，量子力学的考查，**大头仍然是电磁学，包括期中后学习的Maxwell方程**，同时，**一定不要忽视光学部分**，25-26秋冬大题出光学可以说是个很惨痛的教训（
+- **期末考试** 在期中之外增加了光学，量子力学的考查，**大头仍然是电磁学，包括期中后学习的Maxwell方程** ，同时，**一定不要忽视光学部分**，25-26秋冬大题出光学可以说是个很惨痛的教训（
 
   量子力学考查相对较少，这几年几乎都是默写算子/薛定谔方程
 
-  备考上，同样推荐过一遍ppt,**尤其注意一些公式的推导和默写**（e.g.光学部分磨镜者公式，量子力学算子和薛定谔方程，以及25-26秋冬出现的Maxwell方程和电磁波的五个特征）
+  备考上，同样推荐过一遍ppt, **尤其注意一些公式的推导和默写** （e.g.光学部分磨镜者公式，量子力学算子和薛定谔方程，以及25-26秋冬出现的Maxwell方程和电磁波的五个特征）
 
   期末的历年卷相对来说少一些，个人觉得不必做太多，主要是推过ppt后对知识理解
 
@@ -54,11 +54,7 @@ comments: true
 
 包含电磁学，光学，量子力学
 
-<iframe
-    src="/myweb/assets/web/viewer.html?file=/myweb/NOTE/Physics/Generalphysics2/finalreview.pdf"
-    class="pdf-viewer"
-    allowfullscreen>
-</iframe>
+{{ pdf_card("finalreview", "NOTE/Physics/Generalphysics2/finalreview.pdf", "58.8 MB", "43", "2026-02-06") }}
 
 ---
 
@@ -66,9 +62,5 @@ comments: true
 
 包含电磁学，光学
 
-<iframe
-    src="/myweb/assets/web/viewer.html?file=/myweb/NOTE/Physics/Generalphysics2/Midreview.pdf"
-    class="pdf-viewer"
-    allowfullscreen>
-</iframe>
+{{ pdf_card("Midreview", "NOTE/Physics/Generalphysics2/Midreview.pdf", "31.8 MB", "26", "2026-02-06") }}
 
